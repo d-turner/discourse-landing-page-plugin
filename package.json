@@ -1,0 +1,41 @@
+{
+  "name": "discourse-landing-page-plugin",
+  "version": "1.0.0",
+  "description": "DCU landing page for discourse",
+  "main": "",
+  "scripts": {
+    "test": "eslint assets/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CNGLdlab/discourse-landing-page-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CNGLdlab/discourse-landing-page-plugin/issues"
+  },
+  "homepage": "https://github.com/CNGLdlab/discourse-landing-page-plugin#readme",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015-node": "^6.1.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015-node",
+      "stage-0"
+    ]
+  },
+  "dependencies": {
+    "discourse": "^0.1.0",
+    "ember": "^1.0.2"
+  }
+}

@@ -1,0 +1,63 @@
+{{#if renderPage}}
+<div class="heading-top">
+    <div class="clock-wrap">
+        <span id="clock-title">{{clocktitle}}</span>
+        <div class="header-clock" id="clockdiv">
+            <div>
+                <span class="days">00</span>
+                <div class="smalltext">Days</div>
+            </div>
+            <div>
+                <span class="hours">0</span>
+                <div class="smalltext">Hours</div>
+            </div>
+            <div>
+                <span class="minutes">0</span>
+                <div class="smalltext">Minutes</div>
+            </div>
+            <div>
+                <span class="seconds">0</span>
+                <div class="smalltext">Seconds</div>
+            </div>
+        </div>
+    </div>
+
+    {{#if image}}
+    <div class="landing-image">
+        <img src="{{{image}}}" alt="Homepage image" />
+    </div>
+    {{/if}}
+    {{#if video}}
+    <div class="intro-video">
+        <iframe width="100%" height="100%" src="{{video}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+    {{/if}}
+    {{#if live}}
+        <div class="livestream">
+            <iframe src="{{live}}" width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+        </div>
+    {{/if}}
+    <div class="event-wrapper">
+
+        <div class="live-events-wrapper">
+            {{event-list events=live-topics time=time-now label="Now on"}}
+            <a class="widget-button btn-primary btn-large fusebutton" aria-label="Join other conversations"
+            title="Join other conversations" href="/latest">Join other conversations</a>
+        </div>
+
+        <div class="next-events-wrapper">
+            {{event-list events=next-topics time=time-next label="Next"}}
+            <a class="widget-button btn-primary btn-large fusebutton" aria-label="View the full schedule of events"
+            title="View the full schedule of events" target="_blank" href="/uploads/default/original/1X/72524665b5eb50cc8f3037dac80cb436b14e4c88.pdf">View the full schedule of events</a>
+        </div>
+
+        <div class="right-hand-wrapper-4">
+            <a class="twitter-timeline" href="https://twitter.com/DublinCityUni"
+            data-height="500">Tweets by DublinCityUni</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+    </div>
+
+</div>
+{{/if}}

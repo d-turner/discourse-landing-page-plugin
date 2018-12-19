@@ -1,0 +1,36 @@
+
+<div class="title-header">
+    <span class="events">{{label}}</span><span class="events-time"></span>
+</div>
+{{#each events as |event| }}
+    <div class="live-event">
+        <div class="box-off" >
+            <a class="event-link" style="display:block" href="{{event.url}}">
+                <div class="clearfix event-content">
+                    <span>
+                        <i class="fa {{event.favicon}} fa-3x" style="float:left; margin:6px; color:{{event.faviconColor}};"></i>
+                    </span>
+                    <div class="event-title">
+                        <span>{{event.title}}</span>
+                    </div>
+                    <span>
+                        <i class="fa fa-chevron-right fa-3x" style="float:right; margin:3px; color:{{event.faviconColor}};"></i>
+                    </span>
+                    <div class='speaker-list'>
+                        {{#if event.speakers}}
+                            <span>With </span>
+                            {{#each event.speakers as |speaker|}}
+                                {{{speaker}}}
+                            {{/each}}
+                        {{/if}}
+                    </div>
+                    <div class='event-time'>
+                        {{#if event.time}}
+                        <span>{{event.time}}</span>
+                        {{/if}}
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+{{/each}}
