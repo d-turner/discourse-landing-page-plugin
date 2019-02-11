@@ -196,6 +196,8 @@ function initializePlugin(api, component) {
   console.log(api)
   console.log('Component:')
   console.log(component)
+  console.log('Current User:')
+  console.log(api.getCurrentUser())
   ajax({
     url: `/t/${contentId}.json`,
     data: apiAccess,
@@ -291,6 +293,6 @@ function initializePlugin(api, component) {
 
 export default {
   setupComponent(args, component) {
-    withPluginApi('0.8.12', api => initializePlugin(api, component, args));
+    withPluginApi('0.8.8', api => initializePlugin(api, component, args));
   },
 };
