@@ -272,7 +272,7 @@ function initializePlugin(api, component) {
       });
 
       // clock stuff
-      let deadline = new Date(year || 2017, month || 8, day || 25, hour || 12, minute || 0, second || 0);
+      let deadline = new Date(year || 2019, month || 03, day || 15, hour || 12, minute || 0, second || 0);
       setTimeout(function() {
         initializeClock('clockdiv', deadline);
       }, 500);
@@ -286,6 +286,6 @@ function initializePlugin(api, component) {
 
 export default {
   setupComponent(args, component) {
-    withPluginApi('0.8', api => initializePlugin(api, component, args));
+    withPluginApi('0.8.28', api => initializePlugin(api, component, args));
   },
 };
