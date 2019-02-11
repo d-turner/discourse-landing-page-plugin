@@ -272,7 +272,7 @@ function initializePlugin(api, component) {
       });
 
       // clock stuff
-      let deadline = new Date(year || 2019, month || 03, day || 15, hour || 12, minute || 0, second || 0);
+      let deadline = new Date(year || 2019, month || 3, day || 15, hour || 12, minute || 0, second || 0);
       setTimeout(function() {
         initializeClock('clockdiv', deadline);
       }, 500);
