@@ -286,6 +286,6 @@ function initializePlugin(api, component) {
 
 export default {
   setupComponent(args, component) {
-    withPluginApi('0.8.28', api => initializePlugin(api, component, args));
+    withPluginApi('0.8.10', api => initializePlugin(api, component, args));
   },
 };
