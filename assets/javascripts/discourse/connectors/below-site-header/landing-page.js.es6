@@ -191,6 +191,11 @@ var contentId = 139;
 // var contentId = 22;
 
 function initializePlugin(api, component) {
+  console.log('Initialising...')
+  console.log('API:')
+  console.log(api)
+  console.log('Component:')
+  console.log(component)
   ajax({
     url: `/t/${contentId}.json`,
     data: apiAccess,
@@ -272,7 +277,7 @@ function initializePlugin(api, component) {
       });
 
       // clock stuff
-      let deadline = new Date(year || 2019, month || 3, day || 15, hour || 12, minute || 0, second || 0);
+      let deadline = new Date(year || 2019, month || 2, day || 10, hour || 12, minute || 0, second || 0);
       setTimeout(function() {
         initializeClock('clockdiv', deadline);
       }, 500);
@@ -286,6 +291,6 @@ function initializePlugin(api, component) {
 
 export default {
   setupComponent(args, component) {
-    withPluginApi('0.8.10', api => initializePlugin(api, component, args));
+    withPluginApi('0.8.12', api => initializePlugin(api, component, args));
   },
 };
